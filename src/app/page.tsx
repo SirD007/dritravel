@@ -1,8 +1,7 @@
-import { fetchVIACEP } from '../utils/fetchCEP'
+'use server'
+ 
+import { redirect } from 'next/navigation'
 
-
-export default async function Home() {
-  const myCEPInfo = await fetchVIACEP('13397062')
-  const myCEPInfo2 = await fetchVIACEP('13397062')
-  return (<div>{JSON.stringify(myCEPInfo)}</div>)
+export default async function Page() {
+  redirect('/home')
 }
